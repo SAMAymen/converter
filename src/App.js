@@ -80,8 +80,8 @@ const App = () => {
                   <div>
                     <div className="flex flex-col sm:flex-row justify-between items-baseline">
                       <input
-                        type="number"
-                        placeholder='Enter amount'
+                        type="text"
+                        placeholder='E.g. 1234,56 or 1.234,56'
                         className={`w-full sm:flex-grow mr-2 px-5 py-3 border ${theme === 'dark' ? 'border-gray-600 bg-gray-800 text-white' : 'border-gray-300 bg-white text-gray-700'} rounded-lg outline-none focus:ring-2 ${theme === 'dark' ? 'focus:ring-indigo-400' : 'focus:ring-indigo-500'} mb-4 sm:mb-0`}
                         value={amount}
                         onChange={(e) => setAmount(e.target.value)}
