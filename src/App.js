@@ -42,7 +42,7 @@ const App = () => {
       const [wholePart, decimalPart] = normalizedAmount.split('.');
       const convertedWholePart = toWords(parseFloat(wholePart));
       const convertedDecimalPart = decimalPart ? formatCentsInWords(parseFloat(decimalPart)) : 'zéro';
-      if (convertedDecimalPart == "zéro")
+      if (convertedDecimalPart === "zéro")
         setResult(`${convertedWholePart} dirhams`);
       else
         setResult(`${convertedWholePart} dirhams et ${convertedDecimalPart} centimes`);
