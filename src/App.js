@@ -78,9 +78,21 @@ const App = () => {
                     </div>
                   </div>
                   <div className="divide-y divide-gray-200">
-                    <div className="flex justify-between items-baseline">
-                      <input type="text" placeholder='Enter amount' className={`flex-grow mr-2 px-5 py-3 border ${theme === 'dark' ? 'border-gray-600 bg-gray-800 text-white' : 'border-gray-300 bg-white text-gray-700'} rounded-lg outline-none focus:ring-2 ${theme === 'dark' ? 'focus:ring-indigo-400' : 'focus:ring-indigo-500'} mb-4`} value={amount} onChange={(e) => setAmount(e.target.value)} />
-                      <button id="convertButton" onClick={convertToWords} className="px-5 py-3 text-white rounded-lg bg-indigo-500 hover:bg-indigo-600">Convert</button>
+                    <div className="flex flex-col sm:flex-row justify-between items-baseline">
+                      <input
+                        type="number"
+                        placeholder='Enter amount'
+                        className={`w-full sm:flex-grow mr-2 px-5 py-3 border ${theme === 'dark' ? 'border-gray-600 bg-gray-800 text-white' : 'border-gray-300 bg-white text-gray-700'} rounded-lg outline-none focus:ring-2 ${theme === 'dark' ? 'focus:ring-indigo-400' : 'focus:ring-indigo-500'} mb-4 sm:mb-0`}
+                        value={amount}
+                        onChange={(e) => setAmount(e.target.value)}
+                      />
+                      <button
+                        id="convertButton"
+                        onClick={convertToWords}
+                        className="mt-4 sm:mt-0 w-full sm:w-auto px-5 py-3 text-white rounded-lg bg-indigo-500 hover:bg-indigo-600"
+                      >
+                        Convert
+                      </button>
                     </div>
                     <div className={`py-5 text-base leading-6 ${theme === 'dark' ? 'text-gray-300' : 'text-gray-700'} sm:text-lg sm:leading-7 overflow-auto`} style={{ maxHeight: '200px' }}>
                       <p>{result}</p>
