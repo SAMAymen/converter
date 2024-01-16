@@ -73,11 +73,11 @@ const App = () => {
                 <div className="max-w-md mx-auto">
                   <div className="flex items-center space-x-5 mb-4"> {/* Added margin-bottom */}
                     <div className={`block pl-2 font-semibold text-xl self-start ${theme === 'dark' ? 'text-white' : 'text-gray-700'}`}>
-                      <h2 className="leading-relaxed">Currency Converter</h2>
-                      <p className={`text-sm ${theme === 'dark' ? 'text-gray-300' : 'text-gray-500'} font-normal leading-relaxed`}>Convert your currency to words.</p>
+                      <h2 className="leading-relaxed">Ecrire un nombre en lettres</h2>
+                      <p className={`text-sm ${theme === 'dark' ? 'text-gray-300' : 'text-gray-500'} font-normal leading-relaxed`}>Convertir des chiffres en lettres en Dirhams Marocains.</p>
                     </div>
                   </div>
-                  <div className="divide-y divide-gray-200">
+                  <div>
                     <div className="flex flex-col sm:flex-row justify-between items-baseline">
                       <input
                         type="number"
@@ -91,10 +91,10 @@ const App = () => {
                         onClick={convertToWords}
                         className="mt-4 sm:mt-0 w-full sm:w-auto px-5 py-3 text-white rounded-lg bg-indigo-500 hover:bg-indigo-600"
                       >
-                        Convert
+                        Convertir
                       </button>
                     </div>
-                    <div className={`py-5 text-base leading-6 ${theme === 'dark' ? 'text-gray-300' : 'text-gray-700'} sm:text-lg sm:leading-7 overflow-auto`} style={{ maxHeight: '200px' }}>
+                    <div className={`border-0 py-5 text-base leading-6 ${theme === 'dark' ? 'text-gray-300' : 'text-gray-700'} sm:text-lg sm:leading-7 overflow-auto`} style={{ maxHeight: '200px' }}>
                       <p>{result}</p>
                       {showCopyButton && (
                         <button id="copyButton" onClick={copyToClipboard} className="mt-2 px-5 py-3 text-white rounded-lg bg-indigo-500 hover:bg-indigo-600">
@@ -107,8 +107,8 @@ const App = () => {
               </div>
             </div>
           </div>
-          <footer className="text-left text-xs text-gray-500 mt-4">
-            <div className="px-5 py-3">
+          <footer className={`text-left text-xs ${theme === 'dark' ? 'bg-gray-800 text-gray-500' : 'bg-white text-gray-700'}`}>            
+          <div className="px-5 py-3">
               <h1 className="text-2xl font-bold mb-4">Convertir des chiffres en lettres en Dirhams Marocains</h1>
               <p className="mb-4">Bienvenue sur notre convertisseur de chiffres en lettres pour les Dirhams Marocains. Cet outil vous permet de convertir n'importe quel nombre en son équivalent en lettres dans le contexte de la monnaie marocaine. Il est parfait pour rédiger des chèques, des factures ou tout autre document où vous devez écrire des montants en lettres.</p>
               <p className="mb-4">Pour utiliser cet outil, il suffit d'entrer le montant que vous souhaitez convertir dans le champ de saisie ci-dessous et de cliquer sur le bouton "Convertir". Le montant en lettres sera affiché sous le bouton.</p>
